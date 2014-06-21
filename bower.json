@@ -1,0 +1,15 @@
+{
+  "name": "kdp-description-preview",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "bootstrap": "~3.1.1"
+  }
+}

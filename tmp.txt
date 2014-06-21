@@ -1,0 +1,28 @@
+  <h1>header 1</h1>
+  <h2>header 2</h2>
+  <h3>header 3</h3>
+  <h4>header 4</h4>
+  <h5>header 5</h5>
+  <h6>header 6</h6>
+
+  horizontal rule
+  <hr>
+  <br>
+  <b>bolded</b>
+  <em>emphasize</em>
+  <i>italics</i>
+  <ol>
+    <li>ordered list item 1</li>
+    <li>ordered list item 2</li>
+  </ol>
+  <ul>
+    <li>ordered list item 1</li>
+    <li>ordered list item 2</li>
+  </ul>
+  <p>this is a paragraph</p>
+  <pre>preformatted text</pre>
+  <s>strikethrough</s>
+  <strong>strong (same as bold)</strong>
+  <sub>subscript</sub> reduces font size and drops below the baseline <br />
+  <sup>superscript</sup> reduces the font size and places above the baseline <br />
+  <u>underline</u>
