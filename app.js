@@ -3,6 +3,8 @@
 var myApp = angular.module('myApp', [ ]);
 
 myApp.controller('MainController', ['$scope', function($scope) {
+    $scope.editor = "<h2>This is a header...</h2>\n" +
+"This is some regular text.\n\n<strong>And this is some bolded text.</strong>\n\n";
 }]);
 
 myApp.filter('to_trusted', ['$sce', function($sce){
@@ -12,8 +14,22 @@ myApp.filter('to_trusted', ['$sce', function($sce){
 }]);
 
 myApp.filter('linebreaks', [function(){
+    var trans = function(el) {
+        console.log(el.nodeType);
+        console.log(el);
+        if(el.nodeType == 3) {
+            var text = el.data;
+            //text = text.replace(/^\n/, "");
+            return text.replace(/\n/gm, "<br />\n");
+        }
+        else {
+            return el.outerHTML;
+        }
+    };
+
     return function(text) {
-        return text ? text.replace(/\n/g, "\n<br />") : text;
+        var el = jQuery('<div>' + text + '</div>');
+        return jQuery.makeArray( el.contents() ).map(trans).join('');
     };
 }]);
 
