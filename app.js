@@ -15,8 +15,6 @@ myApp.filter('to_trusted', ['$sce', function($sce){
 
 myApp.filter('linebreaks', [function(){
     var trans = function(el) {
-        console.log(el.nodeType);
-        console.log(el);
         if(el.nodeType == 3) {
             var text = el.data;
             //text = text.replace(/^\n/, "");
